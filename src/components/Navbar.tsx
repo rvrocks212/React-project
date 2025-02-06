@@ -4,22 +4,24 @@ import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar: React.FC = () => {
-  const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [userEmail, setUserEmail] = useState<string | null>(localStorage.getItem("userForm") ? JSON.parse(localStorage.getItem("userForm")!).email : null);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("userForm");
-    if (storedUser) {
-      const userData = JSON.parse(storedUser);
-      setUserEmail(userData.email);
-    }
+    const handleStorageChange = () => {
+      const storedUser = localStorage.getItem("userForm");
+      setUserEmail(storedUser ? JSON.parse(storedUser).email : null);
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("userForm");
     setUserEmail(null);
-    navigate("/home"); 
+    navigate("/"); // Redirect to login page after logout
   };
 
   return (
@@ -55,7 +57,7 @@ const Navbar: React.FC = () => {
               <button className="logout-button" onClick={handleLogout}>Logout</button>
             </>
           ) : (
-            <button className="login-button" onClick={() => navigate("/")}>
+            <button className="login-button" onClick={() => navigate("/login")}>
               Log In
             </button>
           )}
@@ -66,4 +68,5 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
 
