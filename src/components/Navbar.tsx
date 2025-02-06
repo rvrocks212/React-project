@@ -34,7 +34,6 @@ const Navbar: React.FC = () => {
         <li>
           <Link to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
         </li>
-        {userEmail && (
           <>
             <li>
               <Link to="/counter" onClick={() => setMenuOpen(false)}>Counter</Link>
@@ -49,7 +48,6 @@ const Navbar: React.FC = () => {
               <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
             </li>
           </>
-        )}
         <div className="auth-section">
           {userEmail ? (
             <>
@@ -57,7 +55,7 @@ const Navbar: React.FC = () => {
               <button className="logout-button" onClick={handleLogout}>Logout</button>
             </>
           ) : (
-            <button className="login-button" onClick={() => navigate("/login")}>
+            <button className="login-button" onClick={() => navigate("/")}>
               Log In
             </button>
           )}

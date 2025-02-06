@@ -13,14 +13,14 @@ import Navbar from "./components/Navbar.tsx";
 const App: React.FC = () => {
   return (
     <Router>
-      <Navbar />
+      
       <div>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/form" element={<UserForm />} />
-        <Route path="/editor" element={<RichTextEditor />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/home" element={<><Navbar /> <Home /></>} />
+        <Route path="/counter" element={<><Navbar /><Counter /></>} />
+        <Route path="/form" element={<><Navbar /><UserForm /></>} />
+        <Route path="/editor" element={<><Navbar /><RichTextEditor /></>} />
+        <Route path="/dashboard" element={<><Navbar /><Dashboard /></>} />
         <Route path="/" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>
