@@ -67,6 +67,7 @@
     background: #d286cc;
     color: white;
     border: none;
+    margin-top: 0;
     padding: 8px 15px;
     font-size: 1rem;
     cursor: pointer;
