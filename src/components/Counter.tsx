@@ -1,4 +1,3 @@
-// src/Counter.tsx
 import React, { useState, useEffect } from "react";
 import "./Counter.css";
 
