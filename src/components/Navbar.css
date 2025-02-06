@@ -27,6 +27,7 @@
   /* Navigation Links */
   .nav-links {
     list-style: none;
+    align-items: center;
     display: flex;
     gap: 20px;
     margin: 0;
