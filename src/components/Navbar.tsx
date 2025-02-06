@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               <button className="logout-button" onClick={handleLogout}>Logout</button>
             </>
           ) : (
-            <button className="login-button" onClick={() => navigate("/login")}>
+            <button className="login-button" onClick={() => navigate("/")}>
               Log In
             </button>
           )}
