@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap');
+
+.home-container{
+    width: 96vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-family: "Bebas Neue", serif;
+}
+
+.home-title{
+    margin: 0;
+    font-size: 150px;
+}
+
+h3{
+    font-size: 40px;
+}
+
+.components-container{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    justify-content: space-between;
+}
+
+.component-card{
+    background: rgb(35,35,36);
+    width: 23%;
+    height: 100%;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;
+}
+
+.component-card:hover{
+    scale: 1.1;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    font-size: large;
+}
+
+@media (max-width: 768px) {
+    .home-title {
+      font-size: 50px;
+      text-align: center;
+    }
+    .components-container {
+        width: 75%;
+        flex-direction: column;
+      gap: 30px;
+    }
+    .component-card{
+        width: 100%;
+    }
+    .component-card:hover{
+        scale: 1.1;
+    }
+    .home-container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+  }

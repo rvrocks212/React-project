@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap');
+
+.signin-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    font-family: "Bebas Neue", serif;
+  }
+  
+  .signin-form {
+    width: 50%;
+    max-width: 400px;
+    min-height: 300px;
+    padding: 20px;
+    background: rgb(36, 35, 35);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signin-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .signin-form input {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signin-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #d268cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .signin-form button:hover {
+    background-color: #8e2e89;
+  }

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&display=swap');
+
+.user-form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 150px auto;
+    padding: 20px;
+    background: rgb(36, 35, 35);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Bebas Neue", serif;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d268cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #8e2e89;
+  }
+
+  @media (max-width: 768px) {
+    .user-form-container {
+        width: 80%;
+      text-align: center;
+    }
+  }
+  
